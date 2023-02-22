@@ -13,7 +13,7 @@ function NavbarCollapse({ children }) {
   };
 
   return (
-    <nav className={classes.nabvar}>
+    <nav className={classes.navbar}>
       <button className={classes.navbar_btnmenu} onClick={onToggleMenuView}>
         <img src={Menu} alt="Desplegar lista de navegación" />
       </button>
