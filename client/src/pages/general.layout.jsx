@@ -1,10 +1,8 @@
-import classes from "./pages-styles/general.layout.modules.sass";
+import classes from "./pages-styles/layout.module.sass";
 import { Outlet } from "react-router-dom";
 import { Header, Footer } from "../components";
 
 const Layout = () => {
-  const loading = false;
-
   return (
     <div className={classes.container}>
       <Header />
