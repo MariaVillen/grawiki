@@ -24,7 +24,9 @@
     display: none
     @include mq("small")
       display: block
-      margin-bottom: 2rem
+      img
+        padding: 1em
+
 
   &_navbar
     background: inherit
@@ -32,12 +34,12 @@
     height: 100%
 
     &_itemlist
+      margin: 1rem
       @include mq("small") 
         padding: 0
         display: flex
         flex-direction: column
-        gap: 2rem
-        padding-top: 3em
+        gap: 1.5rem
 
     &_list_createBtn
       display: inline-block
@@ -48,8 +50,7 @@
       padding: 1em 2em
       font-size: 0.8rem
       align-self: flex-end
-      margin-right: 1rem
-      margin-bottom: 2rem
+      margin: 2rem
       max-width: 100%
 
       @include mq("small") 

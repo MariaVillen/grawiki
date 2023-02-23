@@ -19,19 +19,22 @@
       display: none 
 
   &_list
-    margin-top: 0.5rem
-    display: none
-    position: absolute
+    top: 0
+    position: fixed
     justify-content: right
-    left: 0
+    height: 100vh
+    right: 0
     width: 50vw
     border-bottom-right-radius: 1rem
     border-top-right-radius: 1rem
     background: white
     text-align: right
-    padding: 1em
+    max-width: 0px
+    overflow-x: hidden
+    transition: max-width 200ms ease-in-out 
 
     @include mq("small") 
+      max-width: unset
       position: static
       width: auto
       border-radius: none
@@ -43,5 +46,6 @@
     &__open
       display: flex
       flex-direction: column
+      max-width: 50vh
     
 
