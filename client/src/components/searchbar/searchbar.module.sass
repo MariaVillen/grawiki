@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *
+.searchbar
+  background: transparent
+  form
+    display: flex
+    flex-wrap: nowrap
+    background: $primary-red
+    border-radius: 2rem
+    padding: 1rem
+    @include mq("small")
+      border-radius: 1rem
+      padding: 1rem 2rem
+
+  &_icon
+    border: none
+    border-bottom-left-radius: 1rem
+    border-top-left-radius: 1rem
+    background: white
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+    
+  &_input
+    width: 100%
+    border-bottom-right-radius: 1rem
+    border-top-right-radius: 1rem
+    border: none
+    background: white
+    &:focus, &:focus-visible, &:focus-within
+      border: none
+      outline: none
+    
