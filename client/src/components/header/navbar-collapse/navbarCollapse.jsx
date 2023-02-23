@@ -11,6 +11,9 @@ function NavbarCollapse({ children }) {
   const closeMenuView = () => {
     setIsMenuOpen(false);
   };
+  const closeIfOptionChosen = (e) => {
+    if (e.target.tagName.toLowerCase() === "a") setIsMenuOpen(false);
+  };
 
   return (
     <nav className={classes.navbar}>
@@ -18,6 +21,7 @@ function NavbarCollapse({ children }) {
         <img src={Menu} alt="Desplegar lista de navegación" />
       </button>
       <div
+        onClick={closeIfOptionChosen}
         className={`${classes.navbar_list} ${
           isMenuOpen ? classes.navbar_list__open : ""
         }`}

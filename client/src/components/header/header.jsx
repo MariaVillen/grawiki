@@ -3,6 +3,7 @@ import NavbarItems from "./navbar-items/navbarItems";
 import Logo from "../logo/logo";
 import { Toys, Government, Health, Bank, MoreList, Edit } from "../../assets";
 import NavbarCollapse from "./navbar-collapse/navbarCollapse";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -14,9 +15,9 @@ function Header() {
         <div className={classes.header_logo_desktop}>
           <Logo type="vertical" />
         </div>
-        <button className={classes.header_navbar_list_createBtn}>
+        <Link to="/create" className={classes.header_navbar_list_createBtn}>
           <img src={Edit} alt="Crear un artículo" /> <span>Crear</span>
-        </button>
+        </Link>
         <ul className={classes.header_navbar_itemlist}>
           <NavbarItems icon={Health} text="Salud" link="/health" />
           <NavbarItems icon={Toys} text="Juguetes" link="/toys" />
