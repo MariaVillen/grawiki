@@ -1,73 +1,62 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Category(models.Model):
     name = models.CharField(
-                            verbose_name='Nombre',
-                            max_length=100
+        verbose_name='Nombre',
+        max_length=100
     )
+    def __str__(self) -> str:
+        return self.name
+    class Meta:
+        verbose_name = 'Categoria'
 
-class Topic(models.Model):
-    name = models.CharField(
-                            verbose_name='Nombre',
-                            max_length=100
-    )
-    fk_category = models.ForeignKey(
-                                        Category,
-                                        verbose_name="Categoria",
-                                        on_delete=models.CASCADE,
-                                        null=False, blank=False,
-    )
-
-class Subtopic(models.Model):
-    name = models.CharField(
-                            verbose_name="Nombre",
-                            max_length=100,
-    )
-    fk_category = models.ForeignKey(
-                                        Topic,
-                                        verbose_name="Tema",
-                                        on_delete=models.CASCADE,
-                                        null=False, blank=False,
-    )
 
 class Tag(models.Model):
     name = models.CharField(
-                            verbose_name="Nombre",
-                            max_length=100,
+        verbose_name="Nombre",
+        max_length=100,
     )
+    def __str__(self) -> str:
+        return self.name
+    class Meta:
+        verbose_name = 'Tag'
+
 
 class Article(models.Model):
     title = models.CharField(
-                                verbose_name='Titulo',
-                                max_length=100
+        verbose_name='Titulo',
+        max_length=100
     )
-    content = models.TextField(
-                                verbose_name='contenido'
+    content = models.CharField(
+        verbose_name='contenido',
+        max_length=1200
     )
     edit = models.BooleanField(
-                                verbose_name='Editable',
-                                default=True
-    )
-    tags = models.ManyToManyField(
-                                    Tag,
+        verbose_name='Editable',
+        default=True
     )
     create = models.DateTimeField(
-                                    auto_now_add=True,
-                                    editable=False,
-                                    verbose_name="Creado"
+        auto_now_add=True,
+        editable=False,
+        verbose_name="Creado"
     )
     update = models.DateTimeField(
-                                    auto_now=True,
-                                    verbose_name="Actualizado"
+        auto_now=True,
+        verbose_name="Actualizado"
     )
-    fk_subtopic = models.ForeignKey(
-                                        Subtopic,
-                                        verbose_name="Subtema",
-                                        on_delete=models.CASCADE,
-                                        null=False, blank=False,
-                                        
+    fk_category = models.ForeignKey(
+        Category,
+        verbose_name="Category",
+        on_delete=models.CASCADE,
+        null=False, blank=False,
     )
-    fk_tags = models.ManyToManyField(tags,
-                                    null=True, blank=True,
-    )
+    fk_tags = models.ManyToManyField(Tag, null=True, blank=True,)
+
+    def __str__(self) -> str:
+        return self.title
+
+    class Meta:
+        verbose_name = 'Articulo'
