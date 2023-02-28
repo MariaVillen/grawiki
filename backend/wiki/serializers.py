@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Category
+from .models import Article, Category, Tag
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,4 +10,9 @@ class ArticleSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
+        fields = ('id', 'name',)
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
         fields = ('id', 'name',)
