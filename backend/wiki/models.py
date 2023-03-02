@@ -53,7 +53,7 @@ class Article(models.Model):
         on_delete=models.CASCADE,
         null=False, blank=False,
     )
-    fk_tags = models.ManyToManyField(Tag, null=True, blank=True,)
+    fk_tags = models.ManyToManyField(Tag, blank=True,)
 
     def __str__(self) -> str:
         return self.title
