@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *
+.container
+  background: transparent
+  border-radius: 2rem
+  overflow: hidden
+  width: 100%
+
+.headerbar 
+  background: $primary-red
+  color: white
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1em
+  width: 100%
+  
+  &_title
+    margin-left: 1em
+
+.innerContainer 
+  display: none
+  &_open
+    display: block
+    background: white
+    padding: 1em

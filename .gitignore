@@ -27,3 +27,6 @@ dist-ssr
 .prettierignore
 .prettierrc
 
+stories
+.storybook
+

@@ -1,0 +1,29 @@
+@use "../../styles/variables.sass" as *
+.container
+  margin-top: 1.2rem
+
+.form_group
+  display: flex
+  flex-direction: column
+  gap: 1em
+  padding: 1em
+  
+.input_text
+  background: #FFFFFF
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 2rem
+  padding: 0.75rem.75rem 0.75rem 1.5rem
+  border: none
+  &:focus-visible
+    ouline: none
+
+.button_form
+  border-radius: 1rem
+  color: white
+  border: none
+  padding: 0.5em
+
+.submit
+    background: $button-color-red
+.cancel
+    background: $primary-blue

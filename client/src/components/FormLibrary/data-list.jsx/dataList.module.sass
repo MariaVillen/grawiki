@@ -1,0 +1,38 @@
+.dataList
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-radius: 2rem
+  border: 1px solid #bfbfbf
+
+  input
+    border: none
+    border-bottom-left-radius: 2rem
+    border-top-left-radius: 2rem
+    padding: 0.75em 0.5em 0.75em 1.5em
+    &:focus-visible
+      outline: none
+
+  button
+    padding: 0.25em 1em
+    border-bottom-right-radius: 2rem
+    border-top-right-radius: 2rem
+
+  &_list 
+    display: none
+
+  &_list_open 
+    display: inherit
+    padding: 1em
+
+    
+    ul
+      padding: 0
+
+  &_item
+    list-style: none
+    padding: 0.5em
+
+
+  &_input
+    width: 100%

@@ -1,5 +1,5 @@
 import classes from "./searchbar.module.sass";
-import { Search } from "../../assets";
+import { Search } from "../../../assets";
 
 function Searchbar() {
   return (
