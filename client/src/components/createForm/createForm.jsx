@@ -1,8 +1,8 @@
-import classes from "./createEditor.module.sass";
+import classes from "./createForm.module.sass";
 import CollapseArea from "../collapseArea/collapseArea";
-import DataList from "../FormLibrary/data-list.jsx/dataList";
+import DataListIcon from "../FormLibrary/data-list-icon.jsx/dataListIcon";
 
-function CreateEditor() {
+function CreateForm() {
   const submitHandler = (e) => {
     e.preventDefault();
   };
@@ -13,7 +13,7 @@ function CreateEditor() {
         <form onSubmit={submitHandler}>
           <div className={classes.form_group}>
             <label>Seleccione Categoría</label>
-            <DataList title="Categorías" />
+            <DataListIcon title="Categorías" />
           </div>
           <div className={classes.form_group}>
             <label>Título</label>
@@ -46,4 +46,4 @@ function CreateEditor() {
   );
 }
 
-export default CreateEditor;
+export default CreateForm;

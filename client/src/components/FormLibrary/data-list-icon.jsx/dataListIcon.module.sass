@@ -1,0 +1,78 @@
+.container
+  position: relative
+  
+.dataList
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-radius: 2rem
+  border: 1px solid #bfbfbf
+
+  &.open 
+    border-radius: 1rem
+    border-bottom: none
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  input
+    border: none
+    border-bottom-left-radius: 2rem
+    border-top-left-radius: 2rem
+    padding: 0.75rem 0.5rem 0.75rem 1.5rem
+    width: 100%
+    font-size: 1rem
+
+    &:focus-visible
+      outline: none
+
+  &_iconCat
+    vertical-align: middle
+    padding-left: 0.75rem
+    width: 3rem
+
+  button
+    padding: 0.25rem 1rem
+    border-bottom-right-radius: 2rem
+    border-top-right-radius: 2rem
+
+  &_list 
+    display: none
+
+  &_list_open 
+    display: inherit
+    padding: 0
+    border: 1px solid #bfbfbf
+    border-bottom-left-radius: 1rem
+    border-bottom-right-radius: 1rem
+    border-top: none
+    position: absolute
+    width: 100%
+    top: 2.75rem
+    background: white
+
+    
+    ul
+      padding: 0
+
+  &_item
+    list-style: none
+    padding: 0.25rem 0.5rem
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    padding-left: 0
+
+    &:last-child
+      border-bottom: none
+      padding-bottom: 1rem
+
+    img
+      vertical-align: middle
+      padding-left: 0.75em
+      width: 3rem
+
+    span
+      padding: 0.75em 0.5em 0.75em 1.5em
+
+.open, input.open
+  border-bottom: none
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
