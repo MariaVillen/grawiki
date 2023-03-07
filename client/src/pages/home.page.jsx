@@ -1,6 +1,6 @@
 function Home() {
   console.log("Home");
-  return <div>Welcome to home page!</div>;
+  return <div>Home</div>;
 }
 
 export default Home;

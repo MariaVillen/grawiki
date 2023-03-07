@@ -15,7 +15,7 @@ const dataMock = [
  * Description: A selector with suggestions
  */
 
-function DataList({ title, data = dataMock }) {
+function DataList({ title, data = dataMock, name = "categories" }) {
   const inputRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -52,7 +52,7 @@ function DataList({ title, data = dataMock }) {
     inputRef.current.focus();
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
     setIsOpen(!isOpen);
   };
 
@@ -69,17 +69,21 @@ function DataList({ title, data = dataMock }) {
         <input
           ref={inputRef}
           type="text"
+          id={name}
+          name={name}
           value={inputValue}
           onChange={onChangeCat}
           className={isOpen ? classes.open : null}
           placeholder={title}
         />
-        <ToggleButton
-          className={classes.dataList_icon}
-          icon={DeployMenuInverse}
-          isOpen={isOpen}
-          onClick={toggleMenu}
-        />
+        <label htmlFor={name}>
+          <ToggleButton
+            className={classes.dataList_icon}
+            icon={DeployMenuInverse}
+            isOpen={isOpen}
+            onClick={toggleMenu}
+          />
+        </label>
       </div>
 
       <div
@@ -106,6 +110,7 @@ export default DataList;
 
 const Suggestions = ({ data, onSelect, focusInput }) => {
   const applyValue = (el) => {
+    console.log("applyValue");
     onSelect({ icon: el.icon, target: { value: el.text } }); // mimic onchange event
     focusInput();
   };

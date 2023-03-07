@@ -11,6 +11,7 @@ import classes from "./togglebutton.module.sass";
 function ToggleButton({ className, icon, isOpen, onClick }) {
   return (
     <button
+      type="button"
       className={`${className} ${isOpen ? classes.button_up : classes.button}`}
       onClick={onClick}
     >
