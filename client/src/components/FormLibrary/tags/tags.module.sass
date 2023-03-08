@@ -30,12 +30,41 @@
   font-size: 1rem
   display: flex
   min-height: 43px
+  position: relative
+  &_open
+    border-radius: 1rem
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
 .input_holder
   border: none
   outline: none
   border-radius: 1rem
   padding-left: 1rem
   font-size: 1rem
+  display: inline
   &:focus-visible
     ouline: none
 
+
+.dataList
+  &_list 
+    display: none
+
+  &_list_open 
+    display: inherit
+    padding: 0
+    border: 1px solid #bfbfbf
+    border-bottom-left-radius: 1rem
+    border-bottom-right-radius: 1rem
+    border-top: none
+    position: absolute
+    width: 100%
+    top: 2.75rem
+    background: white
+    right: 0
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
+
+    
+    ul
+      padding: 0

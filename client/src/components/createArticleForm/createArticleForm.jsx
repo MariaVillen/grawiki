@@ -52,7 +52,7 @@ function CreateArticleForm() {
               name="tags"
             />
           </div>
-          <div className={classes.form_group}>
+          <div className={`${classes.form_group} ${classes.form_footer}`}>
             <button
               className={`${classes.button_form} ${classes.submit}`}
               onClick={submitHandler}
