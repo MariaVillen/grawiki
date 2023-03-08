@@ -2,9 +2,11 @@ import classes from "./tags.module.sass";
 
 function Tags({ text, deleteTag }) {
   return (
-    <div>
+    <div className={classes.tag}>
       <span>#{text}</span>
-      <button onClick={deleteTag}>x</button>
+      <button type="button" onClick={(e) => deleteTag()}>
+        x
+      </button>
     </div>
   );
 }

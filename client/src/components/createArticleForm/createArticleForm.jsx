@@ -1,10 +1,10 @@
-import classes from "./createForm.module.sass";
+import classes from "./createArticleForm.module.sass";
 import CollapseArea from "../collapseArea/collapseArea";
 import DataListIcon from "../FormLibrary/data-list-icon/dataListIcon";
 import { useState } from "react";
 import { TagsInput } from "../FormLibrary/tags/tagsInput";
 
-function CreateForm() {
+function CreateArticleForm() {
   const [form, setForm] = useState({
     category: "",
     title: "",
@@ -38,15 +38,16 @@ function CreateForm() {
           <div className={classes.form_group}>
             <label>Título</label>
             <input
-              className={classes.input_text}
+              className={`${classes.input_text} ${classes.wide}`}
               type="text"
               placeholder="Escriba el título de su tema"
             />
           </div>
           <div className={classes.form_group}>Editor de texto</div>
           <div className={classes.form_group}>
+            <label>Agregar etiquetas</label>
             <TagsInput
-              title="Agregar etiquetas"
+              placeHolder="Etiquetas"
               onChange={onChangeHandler}
               name="tags"
             />
@@ -71,4 +72,4 @@ function CreateForm() {
   );
 }
 
-export default CreateForm;
+export default CreateArticleForm;

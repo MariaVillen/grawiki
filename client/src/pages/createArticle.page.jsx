@@ -1,13 +1,13 @@
 import classes from "./pages-styles/create.module.sass";
 import Searchbar from "../components/FormLibrary/searchbar/searchbar";
-import CreateForm from "../components/createForm/createForm";
+import CreateArticleForm from "../components/createArticleForm/createArticleForm";
 import CollapseArea from "../components/collapseArea/collapseArea";
 
 function CreateArticle() {
   return (
     <div className={classes.container}>
       <Searchbar />
-      <CreateForm />
+      <CreateArticleForm />
       <CollapseArea
         className={classes.recomend}
         open={false}

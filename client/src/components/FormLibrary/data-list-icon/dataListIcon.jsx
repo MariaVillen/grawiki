@@ -3,6 +3,7 @@ import { DeployMenuInverse } from "../../../assets";
 import ToggleButton from "../../togglebutton/togglebutton";
 import { useState, useRef } from "react";
 import { Health, Toys, Government, Bank } from "../../../assets";
+import { Suggestions } from "./suggestions/suggestions";
 
 const dataMock = [
   { icon: Health, text: "Salud" },
@@ -76,14 +77,12 @@ function DataList({ title, data = dataMock, name = "categories" }) {
           className={isOpen ? classes.open : null}
           placeholder={title}
         />
-        <label htmlFor={name}>
-          <ToggleButton
-            className={classes.dataList_icon}
-            icon={DeployMenuInverse}
-            isOpen={isOpen}
-            onClick={toggleMenu}
-          />
-        </label>
+        <ToggleButton
+          className={classes.dataList_icon}
+          icon={DeployMenuInverse}
+          isOpen={isOpen}
+          onClick={toggleMenu}
+        />
       </div>
 
       <div
@@ -102,35 +101,3 @@ function DataList({ title, data = dataMock, name = "categories" }) {
 }
 
 export default DataList;
-
-/**
- * Component Suggestions
- * Description: A selector of DataList
- */
-
-const Suggestions = ({ data, onSelect, focusInput }) => {
-  const applyValue = (el) => {
-    console.log("applyValue");
-    onSelect({ icon: el.icon, target: { value: el.text } }); // mimic onchange event
-    focusInput();
-  };
-
-  return (
-    <>
-      {data.map((el) => (
-        <li
-          className={classes.dataList_item}
-          key={el.text}
-          onClick={() => applyValue(el)}
-        >
-          <img
-            className={classes.dataList.iconCat}
-            src={el.icon}
-            alt={el.text}
-          />
-          <span>{el.text}</span>
-        </li>
-      ))}
-    </>
-  );
-};
