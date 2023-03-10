@@ -18,7 +18,7 @@ const SimpleSuggestions = ({ data, onSelect, focusInput }) => {
       {data
         ? data?.map((el) => (
             <li
-              className={classes.dataList_item}
+              className={classes.suggestion_item}
               key={el.id}
               onClick={() => applyValue(el)}
             >

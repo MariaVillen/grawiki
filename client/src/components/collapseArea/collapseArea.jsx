@@ -18,7 +18,9 @@ function CollapseArea({ className, title, children, open = true }) {
 
   return (
     <div className={`${classes.container} ${className}`}>
-      <div className={classes.headerbar}>
+      <div
+        className={`${classes.headerbar} ${isOpen && classes.headerbar_open}`}
+      >
         <span className={classes.headerbar_title}>{title}</span>
         <ToggleButton icon={DeployMenu} isOpen={isOpen} onClick={toggleMenu} />
       </div>

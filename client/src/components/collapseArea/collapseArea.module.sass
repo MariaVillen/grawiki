@@ -1,8 +1,6 @@
 @use "../../styles/variables" as *
 .container
   background: transparent
-  border-radius: 2rem
-  overflow: hidden
   width: 100%
 
 .headerbar 
@@ -13,13 +11,20 @@
   align-items: center
   padding: 1em
   width: 100%
+  border-radius: 2rem
+  &_open
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
   
   &_title
     margin-left: 1em
 
 .innerContainer 
   display: none
+
   &_open
     display: block
     background: white
     padding: 1em
+    border-bottom-left-radius: 2rem
+    border-bottom-right-radius: 2rem

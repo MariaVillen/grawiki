@@ -1,42 +1,23 @@
-.dataList
-  &_iconCat
-    vertical-align: middle
-    padding-left: 0.75rem
-    width: 3rem
-  
-  &_item
-    list-style: none
-    padding: 0.25rem 0.5rem
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-    padding-left: 0
 
-    &:last-child
-      border-bottom: none
-      padding-bottom: 1rem
+@use "../../../../styles/variables" as *
 
-    img
-      vertical-align: middle
-      padding-left: 0.75em
-      width: 3rem
+.suggestion_item
+  list-style: none
+  padding: 0.25rem 0.5rem
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  padding-left: 0
+  line-height: 3rem
+  min-height: 3rem
+  widows: 100%
 
-    span
-      padding: 0.75em 0.5em 0.75em 1.5em
-      
-  &_list 
-    display: none
+  &:hover
+    background: $primary-gray
 
-  &_list_open 
-    display: inherit
-    padding: 0
-    border: 1px solid #bfbfbf
+  &:last-child
+    border-bottom: none
+    padding-bottom: 1rem
     border-bottom-left-radius: 1rem
     border-bottom-right-radius: 1rem
-    border-top: none
-    position: absolute
-    width: 100%
-    top: 2.75rem
-    background: white
-
     
-    ul
-      padding: 0
+  & span
+    padding: 0.75em 0.5em 0.75em 1.5em

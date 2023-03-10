@@ -1,0 +1,55 @@
+
+
+  /* tagsInput */
+.container
+  height: 100%
+  width: 100%
+
+.inputTag
+  background: #FFFFFF
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 2rem
+  padding: 4px
+  border: none
+  font-size: 1rem
+  display: flex
+  min-height: 43px
+  position: relative
+  flex-wrap: wrap
+
+  &_open
+    border-radius: 1rem
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  &_list 
+    display: none
+
+    &_open 
+      display: inherit
+      padding: 0
+      border: 1px solid #bfbfbf
+      border-bottom-left-radius: 1rem
+      border-bottom-right-radius: 1rem
+      border-top: none
+      position: absolute
+      width: 100%
+      top: 100%
+      background: white
+      right: 0
+
+      
+      ul
+        padding: 0
+        width: 100%
+
+.input_holder
+  border: none
+  outline: none
+  border-radius: 1rem
+  padding-left: 1rem
+  font-size: 1rem
+  display: inline
+  min-height: 43px
+  &:focus-visible
+    ouline: none
