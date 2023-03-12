@@ -3,10 +3,6 @@
   margin-top: 1.2rem
   font-size: 1rem
 
-  @include mq("medium")
-    width: 80%
-    margin: auto
-
 .form_group
   display: flex
   flex-direction: column
@@ -48,6 +44,12 @@
   padding: 0.5em
 
 .submit
+  background: $primary-red
+  transition: background 200ms ease-in-out
+  &:hover
     background: $button-color-red
 .cancel
-    background: $primary-blue
+  background: $primary-blue
+  transition: background 200ms ease-in-out
+  &:hover
+    background: $button-color-blue

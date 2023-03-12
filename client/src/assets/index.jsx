@@ -14,6 +14,13 @@ export { default as CloseMenu } from "./icons/close.svg";
 export { default as Search } from "./icons/search.svg";
 export { default as DeployMenu } from "./icons/desplegar-menu.svg";
 export { default as DeployMenuInverse } from "./icons/inputcat.svg";
+export { default as GoBack } from "./icons/goback.svg";
+export { default as English } from "./icons/english.svg";
+export { default as Spanish } from "./icons/spanish.svg";
+export { default as Instagram } from "./icons/Instagram.svg";
+export { default as Twitter } from "./icons/Twitter.svg";
+export { default as Facebook } from "./icons/Facebook.svg";
+export { default as Copyright } from "./icons/copyright.svg";
 
 export { default as Edit } from "./icons/edit.svg";
 

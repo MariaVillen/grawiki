@@ -1,4 +1,4 @@
-import { tagsMock } from "../../../data/tags-mock";
+import { tagsMock } from "../../../../data/tags-mock";
 import { useState, useEffect, useRef } from "react";
 
 function useTagsInput() {
@@ -11,7 +11,7 @@ function useTagsInput() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const tagRef = useRef();
-  const regValidation = new RegExp("^[A-Z]+$", "i");
+  const regValidation = new RegExp("^[A-Záéíóúüñ]+$", "i");
   /* Load all tags in database */
   useEffect(() => {
     setTagsData(tagsMock);
@@ -29,12 +29,22 @@ function useTagsInput() {
     return newvalues;
   };
 
+  const validateValue = (value) => {
+    if (!regValidation.test(value)) {
+      console.log("Only alphabetic characters are allowed");
+      tagRef.current.value = "";
+      return false;
+    } else {
+      return value;
+    }
+  };
+
   /* Function: Return a new array with all tags that match with the letter of the input value */
   const getSuggestions = (value) => {
     const suggestions = tagsData.filter((el) => {
       const item = el.text.toLowerCase();
       const found = tagsValues.find((elem) => elem.text.toLowerCase() === item);
-      if (!found) return el.text.toLowerCase().match(value);
+      if (!found) return el.text.toLowerCase().match(value) || false;
     });
     return suggestions;
   };
@@ -54,10 +64,8 @@ function useTagsInput() {
   const AddTag = (value) => {
     /* Check that value has only alphabetic characters */
     if (value === "") return;
-    if (!regValidation.test(value)) {
-      console.log("Only alphabetic characters are allowed");
-      tagRef.current.value = "";
-    } else {
+    console.log(value);
+    if (validateValue(value)) {
       /* Add tags to the list and reset input value */
       if (checkDuplicateTags(value) && tagsValues.length < 5) {
         setTagsValues((prev) => [...prev, { id: value, text: value }]);
@@ -78,6 +86,10 @@ function useTagsInput() {
 
   /* Determinar valores en input */
   const inputChangeHandler = (e) => {
+    if (validateValue(e.tagetValue)) {
+      console.log("value not allowed");
+      return;
+    }
     // Si no, ver si existen sugerencias
     if (e.target.value !== "") {
       const newList = getSuggestions(e.target.value);

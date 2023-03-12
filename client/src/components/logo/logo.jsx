@@ -1,6 +1,7 @@
 import React from "react";
 import { LogoHorizontal, LogoStretch, LogoBackground } from "../../assets";
 import classes from "./logo.module.sass";
+import { Link } from "react-router-dom";
 
 function Logo({ type }) {
   const getLogo = () => {
@@ -14,7 +15,11 @@ function Logo({ type }) {
     }
   };
 
-  return <img className={classes.logo} src={getLogo()} />;
+  return (
+    <Link to="/">
+      <img className={classes.logo} src={getLogo()} />
+    </Link>
+  );
 }
 
 export default Logo;

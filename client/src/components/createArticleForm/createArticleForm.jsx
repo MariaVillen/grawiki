@@ -2,7 +2,7 @@ import classes from "./createArticleForm.module.sass";
 import CollapseArea from "../collapseArea/collapseArea";
 import DataListIcon from "../FormLibrary/data-list-icon/dataListIcon";
 import { useState } from "react";
-import { TagsInput } from "../FormLibrary/tags/tagsInput";
+import { TagsInput } from "../FormLibrary/tags/tagsInput/tagsInput";
 
 function CreateArticleForm() {
   const [form, setForm] = useState({

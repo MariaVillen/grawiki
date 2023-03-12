@@ -1,0 +1,29 @@
+@use "../../../styles/variables" as *
+  
+.footerMobile
+  align-self: end
+  &_follow
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: center
+    line-height: 2.5rem
+    display: flex
+    @include mq("medium")
+    & span
+      padding-right: 1rem
+      @include mq("large")
+        font-weight: bolder
+    & img
+      padding: 5px
+
+  &_copyright
+    display: none
+    @include mq("large")
+      justify-content: center
+    & img
+      padding: 3px
+      vertical-align: middle
+    & span
+      vertical-align: middle
+
+      

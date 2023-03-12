@@ -5,8 +5,8 @@ function navbarItems({ link, icon, text, ...props }) {
   return (
     <li className={classes.menulist} {...props}>
       <Link className={classes.menulist_link} to={link}>
-        <span className={classes.menulist_text}>{text}</span>
-        <img className={classes.menulist_icon} src={icon} />
+        <span className={classes.text}>{text}</span>
+        <img className={classes.icon} src={icon} />
       </Link>
     </li>
   );

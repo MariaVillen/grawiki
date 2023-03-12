@@ -1,6 +1,6 @@
 import classes from "./tagsInput.module.sass";
-import { SimpleSuggestions } from "./simple-suggestions/SimpleSuggestions";
-import Tags from "./tag/tags";
+import { SimpleSuggestions } from "../simple-suggestions/SimpleSuggestions";
+import Tags from "../tag/tags";
 import useTagsInput from "./useTagsInput";
 
 function TagsInput({ placeHolder, onChange, name = "tags" }) {

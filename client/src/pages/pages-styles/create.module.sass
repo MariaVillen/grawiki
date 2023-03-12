@@ -1,7 +1,27 @@
+@use "../../styles/variables" as *
 .container
   width: 100%
   height: 100%
   padding: 1rem
+
+  @include mq("small")
+    margin-top: 1em
+  @include mq("medium")
+    max-width: 1120px
+    width: 80%
+
+.returnMenu
+  display: none
+  @include mq("small")
+    display: flex
+    flex-wrap: nowrap
+    & button
+      background: transparent
+      border: none
+    & span
+      text-align: center
+      color: white
+      flex-grow: 1
 
 .recomend
   margin-top: 1.2rem

@@ -8,8 +8,8 @@ const Layout = () => {
       <Header />
       <main className={classes.main}>
         <Outlet />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
