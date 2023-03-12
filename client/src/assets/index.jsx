@@ -23,5 +23,11 @@ export { default as Facebook } from "./icons/Facebook.svg";
 export { default as Copyright } from "./icons/copyright.svg";
 
 export { default as Edit } from "./icons/edit.svg";
+export { default as Bold } from "./icons/bold.svg";
+export { default as Italic } from "./icons/italic.svg";
+export { default as Underline } from "./icons/underline.svg";
+export { default as Strikethrough } from "./icons/strikethrough.svg";
+export { default as UnorderedList } from "./icons/unordered.svg";
+export { default as OrderedList } from "./icons/ordered.svg";
 
 // Edicion

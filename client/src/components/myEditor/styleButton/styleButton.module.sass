@@ -1,0 +1,18 @@
+@use "../../../styles/variables" as *
+
+$sizeButton: 30px
+
+.editor
+	&_styleButton
+		width: $sizeButton
+		height: $sizeButton
+		vertical-align: middle
+		text-align: center
+		border-radius: 5px
+		line-height: $sizeButton
+		margin: 5px
+		margin-bottom: 0
+	&_activeButton, &_styleButton:hover
+		background: $button-color-blue
+		& img
+			filter: invert(1)

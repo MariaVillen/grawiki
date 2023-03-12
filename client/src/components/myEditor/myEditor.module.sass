@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *
+	
+.editContainer
+	width: calc(100% - 13rem)
+	display: flex
+	flex-direction: column
+
+.edit_menu
+	padding: 0.5rem 1rem
+	border-top-left-radius: 1rem
+	border-top-right-radius: 1rem
+	border: 1px solid $primary-gray
+.edit_control
+	display: inline-flex
+
+.edit_input
+	//border: 1px solid $primary-gray
+	border-top: none
+	padding: 1rem
+	flex-grow: 1
+	border-bottom-left-radius: 1rem
+	border-bottom-right-radius: 1rem
+	box-shadow: inset 0px 0.5px 4px rgba(0, 0, 0, 0.25)
+	min-height: 204px

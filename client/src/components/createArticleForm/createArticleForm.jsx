@@ -3,6 +3,7 @@ import CollapseArea from "../collapseArea/collapseArea";
 import DataListIcon from "../FormLibrary/data-list-icon/dataListIcon";
 import { useState } from "react";
 import { TagsInput } from "../FormLibrary/tags/tagsInput/tagsInput";
+import MyEditor from "../myEditor/myEditor";
 
 function CreateArticleForm() {
   const [form, setForm] = useState({
@@ -43,7 +44,9 @@ function CreateArticleForm() {
               placeholder="Escriba el título de su tema"
             />
           </div>
-          <div className={classes.form_group}>Editor de texto</div>
+          <div className={`${classes.form_group} ${classes.right}`}>
+            <MyEditor />
+          </div>
           <div className={classes.form_group}>
             <label>Agregar etiquetas</label>
             <TagsInput
