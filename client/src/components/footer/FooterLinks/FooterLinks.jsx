@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import classes from "./FooterLinks.module.sass";
 
 function FooterLinks({ data }) {
-  console.log(data.links, data.title);
   return (
     <div className={classes.footerLinks}>
       <p className={classes.footerLinks_title}>{data.title}</p>

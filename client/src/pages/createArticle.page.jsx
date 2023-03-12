@@ -2,14 +2,16 @@ import classes from "./pages-styles/create.module.sass";
 import CreateArticleForm from "../components/createArticleForm/createArticleForm";
 import CollapseArea from "../components/collapseArea/collapseArea";
 import { GoBack } from "../assets";
+import { Link } from "react-router-dom";
+
 function CreateArticle() {
   const onClick = () => {};
   return (
     <div className={classes.container}>
       <div className={classes.returnMenu}>
-        <button role="button" onClick={onClick}>
+        <Link to="/" onClick={onClick}>
           <img src={GoBack} alt="Volver a Temas" />
-        </button>
+        </Link>
         <span>Volver a Temas</span>
       </div>
       <CreateArticleForm />
