@@ -1,8 +1,30 @@
-import { Edit } from "../../assets";
+import {
+  Edit,
+  ThumbsDown,
+  ThumbsUp,
+  Clapping,
+  ThumsDownOutline,
+  ThumsUpOutline,
+  ClappingOutline,
+  PinchedOutline,
+} from "../../assets";
 import { ReactionButton } from "./reaction-button/reactionButton";
 import { ReactionCounter } from "./reaction-counter/reactionCounter";
+import { useState } from "react";
 
-function ArticleCard() {
+function ArticleCard({ data }) {
+  const [title, category, content, likes, clappings, unlikes, pinched] = data;
+  const [reactions, setReactions] = useState({
+    likes,
+    clappings,
+    unlikes,
+    pinched,
+  });
+
+  const onReaction = (e, type) => {
+    console.log(type, e);
+  };
+
   return (
     <article>
       <div className={classes.article_header}>
@@ -14,39 +36,45 @@ function ArticleCard() {
           <img src={Edit} alt="edit" />
         </div>
       </div>
-      <div className={classes.article_body}>
-        {content}
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio veritatis
-        laborum accusantium. Deleniti earum, iste, incidunt, veritatis aliquid
-        expedita consequatur laudantium reprehenderit dolores vel beatae nobis
-        suscipit minima excepturi necessitatibus!
-      </div>
+      <div className={classes.article_body}>{content}</div>
       <div className={classes.article_footer}>
         <div className={classes.article_footer_reactions}>
-          <ReactionCounter icon={ThumbUp} alt="thumbUp" value="0" />
-          <ReactionCounter icon={Clapping} alt="clapping hands" value="0" />
-          <ReactionCounter icon={ThumbDown} alt="thumbDown" value="0" />
+          <ReactionCounter
+            icon={ThumbsUp}
+            alt="thumbUp"
+            value={reactions.likes}
+          />
+          <ReactionCounter
+            icon={Clapping}
+            alt="clapping hands"
+            value={reactions.clappings}
+          />
+          <ReactionCounter
+            icon={ThumbsDown}
+            alt="thumbDown"
+            value={reactions.unlikes}
+          />
         </div>
         <div className={classes.article_footer_handlers}>
           <ReactionButton
-            icon={ThumbUpOutline}
+            icon={ThumsUpOutline}
             alt="react thumb up"
-            onClick={onReaction}
+            onClick={onReaction.bind(null, "likes")}
           />
           <ReactionButton
             icon={ClappingOutline}
             alt="react clapping hands"
-            onClick={onReaction}
+            onClick={onReaction.bind(null, "clappings")}
           />
           <ReactionButton
-            icon={ThumbDownOutline}
+            icon={ThumsDownOutline}
             alt="react thumb down"
-            onClick={onReaction}
+            onClick={onReaction.bind(null, "unlikes")}
           />
           <ReactionButton
             icon={PinchedOutline}
             alt="react pinched fingers"
-            onClick={onReaction}
+            onClick={onReaction.bind(null, "pinched")}
           />
         </div>
       </div>

@@ -22,6 +22,15 @@ export { default as Twitter } from "./icons/Twitter.svg";
 export { default as Facebook } from "./icons/Facebook.svg";
 export { default as Copyright } from "./icons/copyright.svg";
 
+export { default as ThumbsUp } from "./icons/thumbs_up.svg";
+export { default as ThumbsDown } from "./icons/thumbs_down.svg";
+export { default as Clapping } from "./icons/clapping_hands.svg";
+export { default as ThumsUpOutline } from "./icons/thumbsup_outlined.svg";
+export { default as ThumsDownOutline } from "./icons/thumbsdown_outlined.svg";
+export { default as ClappingOutline } from "./icons/clapping_outlined.svg";
+export { default as PinchedOutline } from "./icons/pinched_outlined.svg";
+
+// Edicion
 export { default as Edit } from "./icons/edit.svg";
 export { default as Bold } from "./icons/bold.svg";
 export { default as Italic } from "./icons/italic.svg";
@@ -29,5 +38,3 @@ export { default as Underline } from "./icons/underline.svg";
 export { default as Strikethrough } from "./icons/strikethrough.svg";
 export { default as UnorderedList } from "./icons/unordered.svg";
 export { default as OrderedList } from "./icons/ordered.svg";
-
-// Edicion
