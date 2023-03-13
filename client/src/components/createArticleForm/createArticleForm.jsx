@@ -33,7 +33,7 @@ function CreateArticleForm() {
               name="Categories"
               title="Categorías"
               setValue={setForm}
-              getValue={form}
+              value={form.category}
             />
           </div>
           <div className={classes.form_group}>
@@ -42,10 +42,11 @@ function CreateArticleForm() {
               className={`${classes.input_text} ${classes.wide}`}
               type="text"
               placeholder="Escriba el título de su tema"
+              value={form.title}
             />
           </div>
           <div className={`${classes.form_group} ${classes.right}`}>
-            <MyEditor />
+            <MyEditor value={form.content} />
           </div>
           <div className={classes.form_group}>
             <label>Agregar etiquetas</label>
@@ -53,6 +54,7 @@ function CreateArticleForm() {
               placeHolder="Etiquetas"
               onChange={onChangeHandler}
               name="tags"
+              value={form.tags}
             />
           </div>
           <div className={`${classes.form_group} ${classes.form_footer}`}>

@@ -5,9 +5,9 @@ import "draft-js/dist/Draft.css";
 import classes from "./myEditor.module.sass";
 import StyleButton from "./styleButton/styleButton";
 
-function MyEditor({ dataJson = null }) {
+function MyEditor({ value = null }) {
   const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty(dataJson)
+    EditorState.createEmpty(value)
   );
   const editRef = useRef();
 

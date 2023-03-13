@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *
+.article
+  border-radius: 1rem
+  background: white
+
+  &_header
+    padding: 0.5rem 1rem
+    background: $button-color-blue
+    border-top-right-radius: 1rem
+    border-top-left-radius: 1rem
+    display: flex
+    color: white
+    justify-content: space-between
+
+  &_body
+    background: linear-gradient(180deg, rgba(0, 18, 45, 0) 0%, rgba(1, 26, 63, 0.8) 100%)
+    min-height: 118px
+
+  &_footer
+    padding: 1rem
+    padding-bottom: 0
+    &_reactions
+      display: flex
+      gap: 0.5rem
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+    &_handlers
+      display: flex
+      gap: 1.5rem
+      padding: 1rem 0
+      

@@ -8,12 +8,13 @@ import {
   ClappingOutline,
   PinchedOutline,
 } from "../../assets";
-import { ReactionButton } from "./reaction-button/reactionButton";
-import { ReactionCounter } from "./reaction-counter/reactionCounter";
+import ReactionButton from "./reaction-button/reactionButton";
+import ReactionCounter from "./reaction-counter/reactionCounter";
 import { useState } from "react";
+import classes from "./articleCard.module.sass";
 
 function ArticleCard({ data }) {
-  const [title, category, content, likes, clappings, unlikes, pinched] = data;
+  const { title, category, content, likes, clappings, unlikes, pinched } = data;
   const [reactions, setReactions] = useState({
     likes,
     clappings,
@@ -26,7 +27,7 @@ function ArticleCard({ data }) {
   };
 
   return (
-    <article>
+    <article className={classes.article}>
       <div className={classes.article_header}>
         <div className={classes.article_header_title}>
           <h2>{title}</h2>

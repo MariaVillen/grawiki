@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./reactionCounter.module.sass";
 
 function ReactionCounter({ icon, alt, value }) {
   return (

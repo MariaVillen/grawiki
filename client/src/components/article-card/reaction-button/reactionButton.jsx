@@ -1,8 +1,7 @@
-import React from "react";
-
+import classes from "./reactionButton.module.sass";
 function ReactionButton({ icon, alt, onClick }) {
   return (
-    <button type="button" className={classes.button_reaction} onClick={onClick}>
+    <button type="button" className={classes.reaction} onClick={onClick}>
       <img src={icon} alt={alt} />
     </button>
   );

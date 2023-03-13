@@ -1,20 +1,27 @@
-import { tagsMock } from "../../../../data/tags-mock";
 import { useState, useEffect, useRef } from "react";
+import useServices from "../../../../services/useMockServices";
 
-function useTagsInput() {
+function useTagsInput({ tags = [] }) {
   /* Variables */
+  const { tags: tagServices } = useServices();
   const [tagsData, setTagsData] = useState();
   const [suggestedValues, setSuggestedValues] = useState([]);
-  const [tagsValues, setTagsValues] = useState([
-    { id: "workingTag", text: "workingTag" },
-  ]);
+  const [tagsValues, setTagsValues] = useState(tags);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const tagRef = useRef();
   const regValidation = new RegExp("^[A-Záéíóúüñ]+$", "i");
+
   /* Load all tags in database */
   useEffect(() => {
-    setTagsData(tagsMock);
+    (async () => {
+      try {
+        const data = tagServices.get();
+        setTagsData(data);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
     setIsLoading(false);
   }, []);
 

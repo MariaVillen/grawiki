@@ -3,7 +3,7 @@ import { SimpleSuggestions } from "../simple-suggestions/SimpleSuggestions";
 import Tags from "../tag/tags";
 import useTagsInput from "./useTagsInput";
 
-function TagsInput({ placeHolder, onChange, name = "tags" }) {
+function TagsInput({ placeHolder, onChange, name = "tags", value }) {
   const {
     tagRef,
     isLoading,
@@ -15,7 +15,7 @@ function TagsInput({ placeHolder, onChange, name = "tags" }) {
     onKeyDownHandler,
     selectTag,
     inputFocus,
-  } = useTagsInput();
+  } = useTagsInput(value);
 
   return (
     <div className={classes.container}>

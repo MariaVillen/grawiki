@@ -16,10 +16,10 @@ const dataMock = [
  * Description: A selector with suggestions
  */
 
-function DataList({ title, data = dataMock, name = "categories" }) {
+function DataList({ title, data = dataMock, name = "categories", value = "" }) {
   const inputRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(value);
   const [inputIcon, setInputIcon] = useState("");
   const [suggestionList, setSuggestionList] = useState(data);
 

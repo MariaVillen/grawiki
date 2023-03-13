@@ -1,5 +1,5 @@
-import { articlesMock } from "../data/articles-mock";
-import { tagsMock } from "../data/tags-mock";
+import { articlesMock } from "./data/articles-mock";
+import { tagsMock } from "./data/tags-mock";
 import { addLocal, getToken, removeLocal } from "../utils/localStorage";
 
 function useServices() {
@@ -24,6 +24,10 @@ function useServices() {
       removeLocal();
       return "Successfully logged out";
     },
+  };
+
+  const users = {
+    getAllUsers: () => "all users",
   };
 
   // ARTICLE API CALLS
