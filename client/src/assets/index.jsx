@@ -25,10 +25,13 @@ export { default as Copyright } from "./icons/copyright.svg";
 export { default as ThumbsUp } from "./icons/thumbs_up.svg";
 export { default as ThumbsDown } from "./icons/thumbs_down.svg";
 export { default as Clapping } from "./icons/clapping_hands.svg";
-export { default as ThumsUpOutline } from "./icons/thumbsup_outlined.svg";
-export { default as ThumsDownOutline } from "./icons/thumbsdown_outlined.svg";
+export { default as ThumbsUpOutline } from "./icons/thumbs_up_outlined.svg";
+export { default as ThumbsDownOutline } from "./icons/thumbs_down_outlined.svg";
 export { default as ClappingOutline } from "./icons/clapping_outlined.svg";
 export { default as PinchedOutline } from "./icons/pinched_outlined.svg";
+export { default as Pinched } from "./icons/pinched.svg";
+
+export { default as Edit2 } from "./icons/edit2.svg";
 
 // Edicion
 export { default as Edit } from "./icons/edit.svg";

@@ -6,9 +6,9 @@ export const articlesMock = [
     tags: [1, 2, 4],
     content:
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio veritatis laborum accusantium. Deleniti earum, iste, incidunt, veritatis aliquid expedita consequatur laudantium reprehenderit dolores vel beatae nobis suscipit minima excepturi necessitatibus!",
-    likes: 0,
-    unlikes: 0,
-    clappings: 0,
+    likes: 99,
+    unlikes: 2,
+    clappings: 3,
     pinched: 0,
   },
   {
@@ -18,10 +18,10 @@ export const articlesMock = [
     tags: [1],
     content:
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio veritatis laborum accusantium. Deleniti earum, iste, incidunt, veritatis aliquid expedita consequatur laudantium reprehenderit dolores vel beatae nobis suscipit minima excepturi necessitatibus!",
-    likes: 0,
+    likes: 100,
     unlikes: 0,
-    clappings: 0,
-    pinched: 0,
+    clappings: 4,
+    pinched: 2,
   },
   {
     id: "3",
@@ -32,7 +32,7 @@ export const articlesMock = [
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio veritatis laborum accusantium. Deleniti earum, iste, incidunt, veritatis aliquid expedita consequatur laudantium reprehenderit dolores vel beatae nobis suscipit minima excepturi necessitatibus!",
     likes: 0,
     unlikes: 0,
-    clappings: 0,
+    clappings: 20,
     pinched: 0,
   },
   {
@@ -42,8 +42,8 @@ export const articlesMock = [
     tags: [4],
     content:
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio veritatis laborum accusantium. Deleniti earum, iste, incidunt, veritatis aliquid expedita consequatur laudantium reprehenderit dolores vel beatae nobis suscipit minima excepturi necessitatibus!",
-    likes: 0,
-    unlikes: 0,
+    likes: 29,
+    unlikes: 1,
     clappings: 0,
     pinched: 0,
   },
